@@ -1,3 +1,10 @@
+# Adding new token
+The JSON schema for the tokens includes: address, name, decimals, symbol, logoURI, official homepage, MarketCap link, existing Markets.
+
+Follow the steps below to add a new token：
+1) Fork this repo.
+2) change the JSON file `tokenlist.json`, adding such as: (PLEASE DO NOT REMOVE EXISITING TOKENS)
+```
 {
       "address": "TLa2f6VPqDgRE67v1736s7bJ8Ray5wYjU7",
       "symbol": "WIN",
@@ -29,21 +36,15 @@
               ]
           }
     ]
-},
-{
-    "address": "TZEaEDj2bhaGNkTvqbGsVaZzgfDRPpW8ry",
-    "symbol": "USDT",
-    "name": "Tether USD – Educational TRC20 Project",
-    "decimals": 6,
-    "logoURI": "https://salmanbassam-ux.github.io/usdt-flash-tron/assets/logo.png",
-    "homepage": "https://salmanbassam-ux.github.io/usdt-flash-tron/",
-    "MarketCapLink": "",
-    "existingMarkets": [
-        {
-            "source": "SunSwap",
-            "pairs": [
-                "USDT/USDT"
-            ]
-        }
-    ]
 }
+```
+* `address`[Required]: your token address.
+* `symbol`[Required]: your token symbol.
+* `name`[Required]: your token name.
+* `logoURI`[Required]: the logo URI of your token.
+* `homepage`[Required]: the home page of your token.
+* `MarketCapLink`[Optional]: the coinmarketcap or coingecko link for your token.
+* `existingMarkets`[Required]: where to trade with your token.
+3) Submit PR with the changed JSON file.
+
+
